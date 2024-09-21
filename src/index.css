@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-primary;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent text-background hover:bg-opacity-80 font-bold py-2 px-4 rounded transition duration-300;
+  }
+  .btn-secondary {
+    @apply bg-transparent hover:bg-accent hover:text-background text-primary font-bold py-2 px-4 rounded border border-accent transition duration-300;
+  }
+}
