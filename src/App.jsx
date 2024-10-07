@@ -1,13 +1,27 @@
+import React, { useState } from "react";
+import Welcome from "./components/Welcome";
 import Home from "./components/Home";
 import Project from './components/Project';
 
-function App() {
+const App = () => {
+  const [showWelcome, setShowWelcome] = useState(true);
+
+  const handleEnter = () => {
+    setShowWelcome(false);
+  };
+
   return (
-    <div>
-      <Home />
-      <Project />
-    </div>
+    <>
+      {showWelcome ? (
+        <Welcome onEnter={handleEnter} />
+      ) : (
+        <>
+          <Home />
+          <Project />
+        </>
+      )}
+    </>
   );
-}
+};
 
 export default App;

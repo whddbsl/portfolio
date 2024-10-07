@@ -1,84 +1,60 @@
-import React from "react";
 import ProjectCard from "./ProjectCard";
-
-// 아이콘 컴포넌트들 (실제로는 적절한 아이콘 라이브러리를 사용하거나 SVG를 직접 만들어 사용하세요)
-const WebIcon = () => (
-  <svg
-    className="w-6 h-6 text-blue-500"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-    />
-  </svg>
-);
-const AIIcon = () => (
-  <svg
-    className="w-6 h-6 text-purple-500"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-    />
-  </svg>
-);
-const BlogIcon = () => (
-  <svg
-    className="w-6 h-6 text-green-500"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
-    />
-  </svg>
-);
 
 const Project = () => {
   const projects = [
     {
-      title: "Field 홈페이지",
-      description:
-        "Field 회사를 위한 반응형 웹사이트로, 회사 정보와 서비스를 소개합니다.",
-      techStack: ["React", "Tailwind", "Next.js"],
-      githubLink: "https://github.com/yourusername/field-homepage",
-      demoLink: "https://field-homepage.vercel.app",
-      icon: <WebIcon />,
+      title: "FIELD, 전국산업공학도 동아리 ",
+      description: "FIELD 동아리를 위한 반응형 웹사이트 개발 및 성능 최적화",
+      longDescription:
+        "이 프로젝트의 주요 목표는 전국 대학생 산업공학도 모임인 FIELD의 활동과 가치를 효과적으로 전달하는 것이었습니다. 웹 성능 최적화와 웹 표준 준수에 중점을 두어 개발을 진행했습니다.",
+      techStack: ["React", "styledComponent", "PocketBase"],
+      githubLink: "https://github.com/Hooked-On/Field_website",
+      icon: "/icons/FieldIcon.png",
+      inProgress: false,
+      outlines: [
+        "기간 : 2024.01 - 2024.03",
+        "목표: 전국 대학생 산업공학도 모임 FIELD를 위한 반응형 웹사이트 개발 및 성능 최적화",
+        "주요 기술: React, Styled Components, aceternity ui, Redux, Vite, PocketBase",
+        "성과: Google Lighthouse 성능 점수 크게 향상, 모바일 사용성 개선, AWS를 통한 배포",
+      ],
+      features: [
+        "React와 Vite를 활용한 SPA(Single Page Application) 구조 설계 및 구현",
+        "반응형 웹 디자인 적용으로 웹, 모바일 동시 지원",
+        "웹 성능 최적화 (이미지 최적화, 코드 스플리팅, 지연 로딩 등)",
+        "HTML5 시맨틱 태그를 활용한 웹 접근성 및 SEO 개선",
+      ],
+      challenges: [
+        "다양한 브라우저와 디바이스에서의 일관된 사용자 경험 구현",
+        "대용량 이미지 및 비디오 콘텐츠의 효율적인 로딩 최적화",
+        "복잡한 애니메이션 효과의 성능 최적화",
+      ],
     },
     {
-      title: "AI 그림일기",
+      title: "Diarist",
       description:
         "사용자의 일기 내용을 바탕으로 AI가 그림을 생성해주는 웹 애플리케이션입니다.",
-      techStack: ["Vue.js", "Node.js", "OpenAI"],
-      githubLink: "https://github.com/yourusername/ai-diary",
-      demoLink: "https://ai-diary-app.herokuapp.com",
-      icon: <AIIcon />,
+      techStack: ["React", "Expo", "StyledComponent"],
+      githubLink: "https://github.com/hanium-4ward/Diarist",
+      icon: "/icons/DiaristIcon.png",
+      inProgress: false,
     },
     {
-      title: "SSR 블로그",
+      title: "Jiny UI",
       description:
         "Next.js를 활용한 서버사이드 렌더링 블로그 플랫폼으로, SEO에 최적화되어 있습니다.",
-      techStack: ["Next.js", "GraphQL", "PostgreSQL"],
-      githubLink: "https://github.com/yourusername/ssr-blog",
-      demoLink: "https://ssr-blog-example.vercel.app",
-      icon: <BlogIcon />,
+      techStack: ["PHP", "Laravel", "JavaScript"],
+      githubLink: "https://github.com/jinyphp/jinyui2",
+      icon: "/icons/JinyIcon.png",
+      inProgress: false,
+    },
+    {
+      title: "웹 성능 최적화 및 웹 표준",
+      description: "웹 성능 최적화 및 웹 표준을 준수한 프로젝트입니다.",
+      techStack: ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+      githubLink: "",
+
+      icon: "/icons/WebIcon.png",
+      inProgress: true,
     },
   ];
 
@@ -86,7 +62,7 @@ const Project = () => {
     <section className="py-20 bg-gray-900">
       <div className="container px-4 mx-auto">
         <h1 className="mb-12 text-4xl font-bold text-center text-white">
-          프로젝트
+          Projects
         </h1>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
